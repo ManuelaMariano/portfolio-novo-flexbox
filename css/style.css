@@ -318,54 +318,58 @@ img {
 }
 
 @media (max-width: 800px) {
-	.introducao {
-		font-size: 2.3em;
-		padding: 70px 20px;
-	}
-
-	.sobre {
-		flex-direction: column;
-		padding: 50px 25px;
-	}
-
-	.sobre-info h1,
-	.certificacoes h1,
-	.projetos h1,
-	.newsletter-info h1 {
-		font-size: 2em;
-		text-align: center;
-	}
-
-	.sobre-info p {
-		text-align: center;
-	}
-
-	.newsletter {
-		padding: 50px 20px;
-	}
-
-	.newsletter-form {
-		flex-direction: column;
-	}
-
-	.newsletter-form button {
-		width: 100%;
-	}
-
-	.menu {
-		justify-content: center;
-	}
-
-	.menu-logo {
-		margin-bottom: 15px;
-	}
-	section { display: none; }
-
-	.menu-nav a.active {
-  	background: #1a1a2e;
- 	color: #fff;
-  	border-radius: 8px;
-  	padding: 8px 14px;
+.introducao {
+font-size: 2.3em;
+padding: 70px 20px;
 }
+
+.sobre {
+flex-direction: column;
+padding: 50px 25px;
+}
+
+.sobre-info h1,
+.certificacoes h1,
+.projetos h1,
+.newsletter-info h1 {
+font-size: 2em;
+text-align: center;
+}
+
+.sobre-info p {
+text-align: center;
+}
+
+.newsletter {
+padding: 50px 20px;
+}
+
+.newsletter-form {
+flex-direction: column;
+}
+
+.newsletter-form button {
+width: 100%;
+}
+
+.menu {
+justify-content: center;
+}
+
+.menu-logo {
+margin-bottom: 15px;
+}
+
+.menu-nav ul {
+justify-content: center;
+}
+
+.menu-nav a {
+padding: 8px 12px;
+font-size: 0.95rem;
+}
+}
+
+	
 }
 ```
