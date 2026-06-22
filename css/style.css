@@ -359,5 +359,13 @@ img {
 	.menu-logo {
 		margin-bottom: 15px;
 	}
+	section { display: none; }
+
+	.menu-nav a.active {
+  	background: #1a1a2e;
+ 	color: #fff;
+  	border-radius: 8px;
+  	padding: 8px 14px;
+}
 }
 ```
