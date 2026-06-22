@@ -378,5 +378,15 @@ img {
 		padding: 8px 12px;
 		font-size: 0.95rem;
 	}
+.certificado-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 30px;
+}
+
+.certificado-item {
+	max-width: none;
+}
+
 }
 
