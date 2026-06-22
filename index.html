@@ -12,20 +12,12 @@
 	<link rel="stylesheet" href="css/style.css">
 
 	<style>
-		/* ── Controle de abas ── */
-		.secao {
-			display: none;
-		}
+		.pagina { display: none; }
+		.pagina.ativa { display: block; }
 
-		/* Página inicial: mostra só a introdução + sobre */
-		.home-visivel {
-			display: block;
-		}
-
-		/* Aba ativa no menu */
-		.menu-nav a.ativa {
+		.menu-nav a.menu-ativo {
 			background-color: #4a90d9;
-			color: #fff;
+			color: #fff !important;
 			border-radius: 4px;
 			padding: 4px 10px;
 		}
@@ -51,18 +43,18 @@
 
 			<nav class="menu-nav">
 				<ul>
-					<li><a href="#" data-alvo="sobre">Sobre</a></li>
-					<li><a href="#" data-alvo="habilidades">Habilidades</a></li>
-					<li><a href="#" data-alvo="projetos">Projetos</a></li>
-					<li><a href="#" data-alvo="contato">Contato</a></li>
+					<li><a href="#" data-alvo="pg-sobre">Sobre</a></li>
+					<li><a href="#" data-alvo="pg-habilidades">Habilidades</a></li>
+					<li><a href="#" data-alvo="pg-projetos">Projetos</a></li>
+					<li><a href="#" data-alvo="pg-contato">Contato</a></li>
 				</ul>
 			</nav>
 
 		</div>
 	</header>
 
-	<!-- PÁGINA INICIAL: só aparece quando nenhuma aba está ativa -->
-	<div id="pagina-inicial">
+	<!-- ── PÁGINA INICIAL ── -->
+	<div id="pg-home" class="pagina ativa">
 
 		<h1 class="introducao">
 			Manuela Mariano
@@ -74,17 +66,10 @@
 		<section class="sobre">
 			<div class="sobre-info">
 				<h1>Sobre Mim</h1>
-				<p>
-					Sou estudante de Gestão da Tecnologia da Informação na FATEC Jahu e tenho grande interesse por desenvolvimento web, banco de dados, gestão de projetos e transformação digital.
-				</p>
-				<p>
-					Busco constantemente aprimorar meus conhecimentos por meio de projetos acadêmicos e pessoais, unindo tecnologia, criatividade e organização para desenvolver soluções digitais eficientes.
-				</p>
-				<p>
-					Atualmente também realizo serviços voltados à organização digital de pequenos negócios, auxiliando empresas na melhoria de processos e na presença digital.
-				</p>
+				<p>Sou estudante de Gestão da Tecnologia da Informação na FATEC Jahu e tenho grande interesse por desenvolvimento web, banco de dados, gestão de projetos e transformação digital.</p>
+				<p>Busco constantemente aprimorar meus conhecimentos por meio de projetos acadêmicos e pessoais, unindo tecnologia, criatividade e organização para desenvolver soluções digitais eficientes.</p>
+				<p>Atualmente também realizo serviços voltados à organização digital de pequenos negócios, auxiliando empresas na melhoria de processos e na presença digital.</p>
 			</div>
-
 			<div class="sobre-img">
 				<img src="img/sobre.jpg" alt="Foto de Manuela Mariano">
 			</div>
@@ -92,177 +77,125 @@
 
 	</div>
 
-	<!-- ── SEÇÃO: Habilidades (oculta por padrão) ── -->
-	<section class="secao certificacoes" id="habilidades">
-
-		<h1>Habilidades</h1>
-
-		<div class="certificado-container">
-
-			<div class="certificado-item">
-				<h2>Desenvolvimento Web</h2>
-				<p>HTML5, CSS3, Flexbox e GitHub.</p>
-			</div>
-
-			<div class="certificado-item">
-				<h2>Banco de Dados</h2>
-				<p>SQL, modelagem relacional e consultas em banco de dados.</p>
-			</div>
-
-			<div class="certificado-item">
-				<h2>Tecnologia e Gestão</h2>
-				<p>Python, organização de processos digitais e gestão de projetos.</p>
-			</div>
-
-		</div>
-
-	</section>
-
-	<!-- ── SEÇÃO: Projetos (oculta por padrão) ── -->
-	<section class="secao projetos" id="projetos">
-
-		<h1>Projetos</h1>
-
-		<div class="projetos-container">
-
-			<div class="projeto-item">
-				<h2>FlowFix OS</h2>
-				<img src="img/projeto1.jpg" alt="Projeto FlowFix">
-				<p>
-					Sistema de gestão para manutenção de empilhadeiras desenvolvido para centralizar ordens de serviço, acompanhar processos operacionais e otimizar atendimentos técnicos.
-				</p>
-				<a href="#">Ver Projeto</a>
-			</div>
-
-			<div class="projeto-item">
-				<h2>Conecta Digital</h2>
-				<img src="img/projeto2.jpg" alt="Projeto Conecta Digital">
-				<p>
-					Projeto de serviços digitais voltado para pequenos negócios, oferecendo organização de WhatsApp Business, criação de catálogos digitais e apoio à presença online.
-				</p>
-				<a href="#">Ver Projeto</a>
-			</div>
-
-			<div class="projeto-item">
-				<h2>Projetos de Banco de Dados</h2>
-				<img src="img/projeto3.jpg" alt="Projetos de Banco de Dados">
-				<p>
-					Desenvolvimento de projetos acadêmicos utilizando SQL, modelagem de banco de dados e exercícios práticos com sistemas relacionais.
-				</p>
-				<a href="https://github.com/manuelamariano" target="_blank">Ver GitHub</a>
-			</div>
-
-		</div>
-
-	</section>
-
-	<!-- ── SEÇÃO: Contato (oculta por padrão) ── -->
-	<section class="secao newsletter" id="contato">
-
-		<div class="newsletter-info">
-			<h1>Contato</h1>
-			<p>
-				Estou aberta a oportunidades de estágio, projetos freelancer e parcerias na área de tecnologia. Entre em contato para conversarmos.
-			</p>
-		</div>
-
-		<form class="newsletter-form">
-			<input type="email" placeholder="Seu e-mail">
-			<button type="submit">Entrar em Contato</button>
-		</form>
-
-	</section>
-
-	<!-- ── SEÇÃO: Sobre (oculta por padrão, aparece ao clicar na aba) ── -->
-	<section class="secao sobre-aba" id="sobre">
-
-		<div class="sobre">
+	<!-- ── SOBRE ── -->
+	<div id="pg-sobre" class="pagina">
+		<section class="sobre">
 			<div class="sobre-info">
 				<h1>Sobre Mim</h1>
-				<p>
-					Sou estudante de Gestão da Tecnologia da Informação na FATEC Jahu e tenho grande interesse por desenvolvimento web, banco de dados, gestão de projetos e transformação digital.
-				</p>
-				<p>
-					Busco constantemente aprimorar meus conhecimentos por meio de projetos acadêmicos e pessoais, unindo tecnologia, criatividade e organização para desenvolver soluções digitais eficientes.
-				</p>
-				<p>
-					Atualmente também realizo serviços voltados à organização digital de pequenos negócios, auxiliando empresas na melhoria de processos e na presença digital.
-				</p>
+				<p>Sou estudante de Gestão da Tecnologia da Informação na FATEC Jahu e tenho grande interesse por desenvolvimento web, banco de dados, gestão de projetos e transformação digital.</p>
+				<p>Busco constantemente aprimorar meus conhecimentos por meio de projetos acadêmicos e pessoais, unindo tecnologia, criatividade e organização para desenvolver soluções digitais eficientes.</p>
+				<p>Atualmente também realizo serviços voltados à organização digital de pequenos negócios, auxiliando empresas na melhoria de processos e na presença digital.</p>
 			</div>
-
 			<div class="sobre-img">
 				<img src="img/sobre.jpg" alt="Foto de Manuela Mariano">
 			</div>
-		</div>
+		</section>
+	</div>
 
-	</section>
+	<!-- ── HABILIDADES ── -->
+	<div id="pg-habilidades" class="pagina">
+		<section class="certificacoes">
+			<h1>Habilidades</h1>
+			<div class="certificado-container">
+				<div class="certificado-item">
+					<h2>Desenvolvimento Web</h2>
+					<p>HTML5, CSS3, Flexbox e GitHub.</p>
+				</div>
+				<div class="certificado-item">
+					<h2>Banco de Dados</h2>
+					<p>SQL, modelagem relacional e consultas em banco de dados.</p>
+				</div>
+				<div class="certificado-item">
+					<h2>Tecnologia e Gestão</h2>
+					<p>Python, organização de processos digitais e gestão de projetos.</p>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<!-- ── PROJETOS ── -->
+	<div id="pg-projetos" class="pagina">
+		<section class="projetos">
+			<h1>Projetos</h1>
+			<div class="projetos-container">
+				<div class="projeto-item">
+					<h2>FlowFix OS</h2>
+					<img src="img/projeto1.jpg" alt="Projeto FlowFix">
+					<p>Sistema de gestão para manutenção de empilhadeiras desenvolvido para centralizar ordens de serviço, acompanhar processos operacionais e otimizar atendimentos técnicos.</p>
+					<a href="#">Ver Projeto</a>
+				</div>
+				<div class="projeto-item">
+					<h2>Conecta Digital</h2>
+					<img src="img/projeto2.jpg" alt="Projeto Conecta Digital">
+					<p>Projeto de serviços digitais voltado para pequenos negócios, oferecendo organização de WhatsApp Business, criação de catálogos digitais e apoio à presença online.</p>
+					<a href="#">Ver Projeto</a>
+				</div>
+				<div class="projeto-item">
+					<h2>Projetos de Banco de Dados</h2>
+					<img src="img/projeto3.jpg" alt="Projetos de Banco de Dados">
+					<p>Desenvolvimento de projetos acadêmicos utilizando SQL, modelagem de banco de dados e exercícios práticos com sistemas relacionais.</p>
+					<a href="https://github.com/manuelamariano" target="_blank">Ver GitHub</a>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<!-- ── CONTATO ── -->
+	<div id="pg-contato" class="pagina">
+		<section class="newsletter">
+			<div class="newsletter-info">
+				<h1>Contato</h1>
+				<p>Estou aberta a oportunidades de estágio, projetos freelancer e parcerias na área de tecnologia. Entre em contato para conversarmos.</p>
+			</div>
+			<form class="newsletter-form">
+				<input type="email" placeholder="Seu e-mail">
+				<button type="submit">Entrar em Contato</button>
+			</form>
+		</section>
+	</div>
 
 	<footer class="footer">
 		<p>© 2026 Manuela Mariano Pereira • Desenvolvido com HTML e CSS</p>
 	</footer>
 
 	<script>
-		const paginaInicial = document.getElementById('pagina-inicial');
-		const todasSecoes = document.querySelectorAll('.secao');
+		const todasPaginas = document.querySelectorAll('.pagina');
 		const linksMenu = document.querySelectorAll('.menu-nav a[data-alvo]');
 		const logoLink = document.getElementById('logo-link');
 
-		function mostrarSecao(id) {
-			// Oculta página inicial
-			paginaInicial.style.display = 'none';
-
-			// Oculta todas as seções
-			todasSecoes.forEach(function(s) {
-				s.style.display = 'none';
+		function mostrarPagina(id) {
+			todasPaginas.forEach(function(p) {
+				p.classList.remove('ativa');
 			});
+			document.getElementById(id).classList.add('ativa');
 
-			// Mostra a seção clicada
-			var alvo = document.getElementById(id);
-			if (alvo) {
-				alvo.style.display = 'block';
-			}
-
-			// Marca a aba ativa no menu
 			linksMenu.forEach(function(link) {
 				if (link.getAttribute('data-alvo') === id) {
-					link.classList.add('ativa');
+					link.classList.add('menu-ativo');
 				} else {
-					link.classList.remove('ativa');
+					link.classList.remove('menu-ativo');
 				}
 			});
 		}
 
-		function voltarInicio() {
-			// Mostra página inicial
-			paginaInicial.style.display = 'block';
-
-			// Oculta todas as seções
-			todasSecoes.forEach(function(s) {
-				s.style.display = 'none';
-			});
-
-			// Remove destaque do menu
-			linksMenu.forEach(function(link) {
-				link.classList.remove('ativa');
-			});
-		}
-
-		// Clique nos links do menu
 		linksMenu.forEach(function(link) {
 			link.addEventListener('click', function(e) {
 				e.preventDefault();
-				mostrarSecao(this.getAttribute('data-alvo'));
+				mostrarPagina(this.getAttribute('data-alvo'));
 			});
 		});
 
-		// Clique no logo volta para a home
 		logoLink.addEventListener('click', function(e) {
 			e.preventDefault();
-			voltarInicio();
+			mostrarPagina('pg-home');
+			linksMenu.forEach(function(link) {
+				link.classList.remove('menu-ativo');
+			});
 		});
 	</script>
 
 </body>
+</html>
 
 </html>
 
